@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:JhankaulSainik.Helpers" 
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="JhankaulSainik.Views.Sainik.SainiksListUpdatePage"
+             Title="{i18n:Translate UpdateSainik}"
+             Style="{StaticResource PageBackground}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="{i18n:Translate English}" 
+                     Command="{Binding EnglishCommand}" 
+                     Priority="0" 
+                     Order="Primary"/>
+        <ToolbarItem Text="{i18n:Translate Hindi}" 
+                     Command="{Binding HindiCommand}"
+                     Priority="1" 
+                     Order="Primary"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0">
+            <RefreshView Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                <CollectionView ItemsSource="{Binding SainikModels}"
+                                SelectedItem="{Binding SainikModelTapped}"
+                                SelectionMode="Single"
+                                EmptyView="No Sainik Display yet....">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical"
+                                     Span="2"
+                                     VerticalItemSpacing="15"
+                                     HorizontalItemSpacing="15"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="15"
+                               CornerRadius="10">
+                                <StackLayout HorizontalOptions="CenterAndExpand" 
+                                         VerticalOptions="CenterAndExpand">
+                                    <xct:AvatarView Text="{i18n:Translate Logo}"
+                                                Style="{StaticResource ProfileAvatarList}"
+                                                Source="{Binding ProfilePhoto}"/>
+                                    <Label Text="{Binding FullName, TargetNullValue='Not Available'}"
+                                       Style="{StaticResource DynamicLabelList}"/>
+                                    <Label Text="{Binding Position, TargetNullValue='Not Available'}"
+                                       Style="{StaticResource DynamicLabelList}"/>
+                                    <Label Text="{Binding Village, TargetNullValue='Not Availabe'}"
+                                       Style="{StaticResource DynamicLabelList}"/>
+                                    <Label Text="{i18n:Translate ShowDetails}" 
+                                           Style="{StaticResource ShowDetails}"/>
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

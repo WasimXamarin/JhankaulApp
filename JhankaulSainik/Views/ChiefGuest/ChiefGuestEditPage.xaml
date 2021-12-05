@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:i18n="clr-namespace:JhankaulSainik.Helpers"
+             x:Class="JhankaulSainik.Views.ChiefGuest.ChiefGuestEditPage"
+             Style="{StaticResource PageBackground}"
+             Title="{i18n:Translate UpdateChiefGuest}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="{i18n:Translate English}" 
+                     Command="{Binding EnglishCommand}" 
+                     Priority="0" 
+                     Order="Primary"/>
+        <ToolbarItem Text="{i18n:Translate Hindi}" 
+                     Command="{Binding HindiCommand}"
+                     Priority="1" 
+                     Order="Primary"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource StacklayoutLongScreen}">
+            <xct:AvatarView Style="{StaticResource LogoAvatarEdit}" 
+                            Text="{i18n:Translate Logo}"/>
+            <Entry x:Name="FullName" 
+                   Placeholder="{i18n:Translate FullName}"
+                   Style="{StaticResource FullNameEntry}"
+                   Text="{Binding FullName, Mode=TwoWay}"/>
+            <Entry x:Name="MobileNumber" 
+                   Placeholder="{i18n:Translate MobileNumber}"
+                   Style="{StaticResource MobileNumberEntry}"
+                   Text="{Binding MobileNumber, Mode=TwoWay}"/>
+            <Entry x:Name="EmailId" 
+                   Placeholder="{i18n:Translate EmailId}"
+                   Style="{StaticResource EmailIdEntry}"
+                   Text="{Binding EmailId, Mode=TwoWay}"/>
+            <Entry x:Name="Profession"
+                   Placeholder="{i18n:Translate PostInOffice}"
+                   Style="{StaticResource ProfessionEntry}"
+                   Text="{Binding Profession, Mode=TwoWay}"/>
+            <Entry x:Name="Addresses"
+                   Placeholder="{i18n:Translate Address}"
+                   Style="{StaticResource AddressesEntry}"
+                   Text="{Binding Addresses, Mode=TwoWay}"/>
+            <Entry x:Name="Year"
+                   Placeholder="{i18n:Translate InvitationYear}"
+                   Style="{StaticResource YearEntry}"
+                   Text="{Binding Year, Mode=TwoWay}"/>
+            <Button x:Name="UpdateChiefGuestButton" 
+                    Text="{i18n:Translate UpdateChiefGuest}"
+                    Command="{Binding UpdateChiefGuestCommand}"
+                    Style="{StaticResource SaveButton}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

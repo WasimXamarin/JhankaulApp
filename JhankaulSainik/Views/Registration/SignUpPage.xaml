@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:i18n="clr-namespace:JhankaulSainik.Helpers"
+             x:Class="JhankaulSainik.Views.Registration.SignUpPage"
+             Style="{StaticResource PageBackground}"
+             Title="{i18n:Translate SignUp}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="{i18n:Translate English}" 
+                     Command="{Binding EnglishCommand}" 
+                     Priority="0" 
+                     Order="Primary"/>
+        <ToolbarItem Text="{i18n:Translate Hindi}" 
+                     Command="{Binding HindiCommand}" 
+                     Priority="1" 
+                     Order="Primary"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource StacklayoutCommon}">
+            <xct:AvatarView Style="{StaticResource LogoAvatar}" 
+                            Text="{i18n:Translate Logo}"/>
+            <Entry x:Name="FullName" 
+                   Placeholder="{i18n:Translate FullName}"
+                   Style="{StaticResource FullNameEntry}"
+                   Text="{Binding FullName}"/>
+            <Entry x:Name="MobileNumber" 
+                   Placeholder="{i18n:Translate MobileNumber}"
+                   Style="{StaticResource MobileNumberEntry}"
+                   Text="{Binding MobileNumber}"/>
+            <Entry x:Name="EmailId" 
+                   Placeholder="{i18n:Translate EmailId}"
+                   Style="{StaticResource EmailIdEntry}"
+                   Text="{Binding EmailId}"/>
+            <Entry x:Name="Password"
+                   Placeholder="{i18n:Translate Password}"
+                   Style="{StaticResource PasswordEntry}"
+                   Text="{Binding Password}"/>
+            <Button x:Name="SignUpButton" 
+                    Text="{i18n:Translate SignUp}"
+                    Command="{Binding SignUpCommand}"
+                    Style="{StaticResource SaveButton}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

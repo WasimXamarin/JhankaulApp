@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>बारे में</value>
+  </data>
+  <data name="AddJhankaul" xml:space="preserve">
+    <value>झनकौल जोड़ें</value>
+  </data>
+  <data name="AddNewAbout" xml:space="preserve">
+    <value>बारे में नया जोड़ें</value>
+  </data>
+  <data name="AddNewAdmitCard" xml:space="preserve">
+    <value>नया प्रवेश पत्र जोड़ें</value>
+  </data>
+  <data name="AddNewAllStudent" xml:space="preserve">
+    <value>नया जोड़ो सभी विद्यार्थी</value>
+  </data>
+  <data name="AddNewChiefGuest" xml:space="preserve">
+    <value>नए मुख्य अतिथि जोड़ें</value>
+  </data>
+  <data name="AddNewSainik" xml:space="preserve">
+    <value>नया जोड़ो सैनिक</value>
+  </data>
+  <data name="AddOrganizers" xml:space="preserve">
+    <value>आयोजकों को जोड़ें</value>
+  </data>
+  <data name="AddPrizes" xml:space="preserve">
+    <value>पुरस्कार जोड़ें</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>पता</value>
+  </data>
+  <data name="AddResults" xml:space="preserve">
+    <value>परिणाम जोड़ें</value>
+  </data>
+  <data name="AddSchool" xml:space="preserve">
+    <value>स्कूल जोड़ें</value>
+  </data>
+  <data name="AdmitCard" xml:space="preserve">
+    <value>प्रवेश पत्र</value>
+  </data>
+  <data name="AllStudents" xml:space="preserve">
+    <value>सभी विद्यार्थी</value>
+  </data>
+  <data name="ChiefGuest" xml:space="preserve">
+    <value>मुख्य अतिथि</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>हटाएं</value>
+  </data>
+  <data name="DetailsOrganizers" xml:space="preserve">
+    <value>विवरण आयोजक</value>
+  </data>
+  <data name="DetailsPrizes" xml:space="preserve">
+    <value>विवरण पुरस्कार</value>
+  </data>
+  <data name="DetailsProfile" xml:space="preserve">
+    <value>विवरण प्रोफ़ाइल</value>
+  </data>
+  <data name="DetailsResult" xml:space="preserve">
+    <value>विवरण परिणाम</value>
+  </data>
+  <data name="DetailsSchool" xml:space="preserve">
+    <value>विवरण स्कूल</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>संपादित करें</value>
+  </data>
+  <data name="EditSainik" xml:space="preserve">
+    <value>सैनिक संपादित करें</value>
+  </data>
+  <data name="EmailId" xml:space="preserve">
+    <value>ईमेल आईडी</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>अंग्रेज़ी</value>
+  </data>
+  <data name="FacebookId" xml:space="preserve">
+    <value>फेसबुक आईडी</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>पूरा नाम</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>लिंग</value>
+  </data>
+  <data name="Hindi" xml:space="preserve">
+    <value>हिंदी</value>
+  </data>
+  <data name="InvitationYear" xml:space="preserve">
+    <value>आमंत्रण वर्ष</value>
+  </data>
+  <data name="Jhankaul" xml:space="preserve">
+    <value>झनकौल</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>छात्र लॉग इन करें</value>
+  </data>
+  <data name="Logo" xml:space="preserve">
+    <value>प्रतीक चिन्ह</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>लॉग आउट</value>
+  </data>
+  <data name="MobileNumber" xml:space="preserve">
+    <value>मोबाइल नंबर</value>
+  </data>
+  <data name="NoChiefGuestData" xml:space="preserve">
+    <value>कोई मुख्य अतिथि डेटा नहीं</value>
+  </data>
+  <data name="NoOrganizerData" xml:space="preserve">
+    <value>कोई आयोजक डेटा नहीं</value>
+  </data>
+  <data name="NowAppInEnglish" xml:space="preserve">
+    <value>Now App In English</value>
+  </data>
+  <data name="NowAppInHindi" xml:space="preserve">
+    <value>Now App In Hindi</value>
+  </data>
+  <data name="Organizers" xml:space="preserve">
+    <value>आयोजकों</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>कुंजिका</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>पद</value>
+  </data>
+  <data name="PostInArmy" xml:space="preserve">
+    <value>सेना में पोस्ट</value>
+  </data>
+  <data name="PostInOffice" xml:space="preserve">
+    <value>कार्यालय में पोस्ट</value>
+  </data>
+  <data name="Prizes" xml:space="preserve">
+    <value>पुरस्कार</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>प्रोफ़ाइल</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>परिणाम</value>
+  </data>
+  <data name="Sainik" xml:space="preserve">
+    <value>सैनिक</value>
+  </data>
+  <data name="SainikViewDetails" xml:space="preserve">
+    <value>सैनिक विवरण देखें</value>
+  </data>
+  <data name="School" xml:space="preserve">
+    <value>विद्यालय</value>
+  </data>
+  <data name="Show Details" xml:space="preserve">
+    <value>प्रदर्शन का विवरण</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>छात्र साइन अप करें</value>
+  </data>
+  <data name="UpdateAbout" xml:space="preserve">
+    <value>के बारे में अपडेट करें</value>
+  </data>
+  <data name="UpdateAdmitCard" xml:space="preserve">
+    <value>प्रवेश पत्र अपडेट करें</value>
+  </data>
+  <data name="UpdateAllStudents" xml:space="preserve">
+    <value>सभी विद्यार्थी अपडेट करें</value>
+  </data>
+  <data name="UpdateChiefGuest" xml:space="preserve">
+    <value>मुख्य अतिथि अपडेट करें</value>
+  </data>
+  <data name="UpdateJhankaul" xml:space="preserve">
+    <value>झनकौल अपडेट करें</value>
+  </data>
+  <data name="UpdateOrganizers" xml:space="preserve">
+    <value>आयोजकों को अपडेट करें</value>
+  </data>
+  <data name="UpdatePrizes" xml:space="preserve">
+    <value>पुरस्कार अपडेट करें</value>
+  </data>
+  <data name="UpdateProfile" xml:space="preserve">
+    <value>प्रोफ़ाइल अपडेट करें</value>
+  </data>
+  <data name="UpdateResults" xml:space="preserve">
+    <value>परिणाम अपडेट करें</value>
+  </data>
+  <data name="UpdateSainik" xml:space="preserve">
+    <value>सैनिक अपडेट करें</value>
+  </data>
+  <data name="UpdateSchool" xml:space="preserve">
+    <value>विद्यालय अपडेट करें</value>
+  </data>
+  <data name="Village" xml:space="preserve">
+    <value>गाँव</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>वर्ष</value>
+  </data>
+  <data name="YearFrom" xml:space="preserve">
+    <value>वर्ष से</value>
+  </data>
+  <data name="YearTo" xml:space="preserve">
+    <value>वर्ष तक</value>
+  </data>
+</root>

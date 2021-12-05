@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:JhankaulSainik.Helpers"
+             x:Class="JhankaulSainik.Views.About.AboutPage"
+             Title="{i18n:Translate About}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="{i18n:Translate English}" 
+                     Command="{Binding EnglishCommand}" 
+                     Priority="0" 
+                     Order="Primary"/>
+        <ToolbarItem Text="{i18n:Translate Hindi}" 
+                     Command="{Binding HindiCommand}" 
+                     Priority="1" 
+                     Order="Primary"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to About Page"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

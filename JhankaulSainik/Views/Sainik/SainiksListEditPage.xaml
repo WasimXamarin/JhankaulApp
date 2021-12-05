@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:JhankaulSainik.Helpers" 
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="JhankaulSainik.Views.Sainik.SainiksListEditPage"
+             Title="{i18n:Translate EditSainik}"
+             Style="{StaticResource PageBackground}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="{i18n:Translate English}" 
+                     Command="{Binding EnglishCommand}" 
+                     Priority="0" 
+                     Order="Primary"/>
+        <ToolbarItem Text="{i18n:Translate Hindi}" 
+                     Command="{Binding HindiCommand}"
+                     Priority="1" 
+                     Order="Primary"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10" 
+                     Margin="30,0,30,0">
+                <xct:AvatarView Style="{StaticResource LogoAvatarEdit}" 
+                            Text="{i18n:Translate Logo}"/>
+                <Entry x:Name="FullName" 
+                       Style="{StaticResource FullNameEntry}"
+                       Placeholder="{i18n:Translate FullName}"
+                       Text="{Binding FullName}"/>
+                <Entry x:Name="MobileNumber"
+                       Placeholder="{i18n:Translate MobileNumber}"
+                       Style="{StaticResource MobileNumberEntry}"
+                       Text="{Binding MobileNumber}"/>
+                <Entry x:Name="EmailId"  
+                       Placeholder="{i18n:Translate EmailId}"
+                       Style="{StaticResource EmailIdEntry}"
+                       Text="{Binding EmailId}"/>
+                <Entry x:Name="FacebookId"
+                       Placeholder="{i18n:Translate FacebookId}"
+                       Style="{StaticResource EmailIdEntry}"
+                       Text="{Binding FacebookId}"/>
+                <Entry x:Name="Position" 
+                       Placeholder="{i18n:Translate PostInOffice}"
+                       Style="{StaticResource ProfessionEntry}"
+                       Text="{Binding Position}"/>
+                <Entry x:Name="YearFrom"
+                       Style="{StaticResource YearEntry}"
+                       Placeholder="{i18n:Translate YearFrom}"
+                       Text="{Binding YearFrom}"/>
+                <Entry x:Name="YearTo"
+                       Placeholder="{i18n:Translate YearTo}"
+                       Style="{StaticResource YearEntry}"
+                       Text="{Binding YearTo}"/>
+                <Entry x:Name="Village" 
+                       Placeholder="{i18n:Translate Address}"
+                       Style="{StaticResource AddressesEntry}"
+                       Text="{Binding Village}"/>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="{i18n:Translate Delete}" 
+                            BackgroundColor="Red" 
+                            Style="{StaticResource DeleteButton}"
+                            Command="{Binding DeleteSainikCommand}"/>
+                    <Button Text="{i18n:Translate UpdateSainik}"
+                            Style="{StaticResource EditButton}"
+                            Command="{Binding UpdateSainikCommand}"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

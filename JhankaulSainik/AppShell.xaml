@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:i18n="clr-namespace:JhankaulSainik.Helpers"
+       xmlns:localSchool="clr-namespace:JhankaulSainik.Views.School"
+       xmlns:localSaink="clr-namespace:JhankaulSainik.Views.Sainik"
+       xmlns:localAbout="clr-namespace:JhankaulSainik.Views.About"
+       xmlns:localAdmitCard="clr-namespace:JhankaulSainik.Views.AdmitCard"
+       xmlns:localAllStudent="clr-namespace:JhankaulSainik.Views.AllStudent"
+       xmlns:localHome="clr-namespace:JhankaulSainik.Views.Home"
+       xmlns:localChiefGuest="clr-namespace:JhankaulSainik.Views.ChiefGuest"
+       xmlns:localOrganizer="clr-namespace:JhankaulSainik.Views.Organizer"
+       xmlns:localPrizes="clr-namespace:JhankaulSainik.Views.Prizes"
+       xmlns:localProfile="clr-namespace:JhankaulSainik.Views.Profile"
+       xmlns:localRegistration="clr-namespace:JhankaulSainik.Views.Registration"
+       xmlns:localResult="clr-namespace:JhankaulSainik.Views.Result"
+       Title="JhankaulSainik"
+       x:Class="JhankaulSainik.AppShell">
+
+    <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+    
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+
+            <!--
+            Default Styles for all Flyout Items
+            https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyoutitem-and-menuitem-style-classes
+            -->
+            <Style Class="FlyoutItemLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+            <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{x:OnPlatform UWP=Transparent, iOS=White}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+            <!--
+            Custom Style you can apply to any Flyout Item
+            -->
+            <Style Class="MenuItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <!-- 
+        When the Flyout is visible this defines the content to display in the flyout.
+        FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
+        https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
+    -->
+
+    <!--<FlyoutItem Title="{i18n:Translate LogIn}" 
+                Icon="icon_feed.png">
+        <ShellContent Route="LoginPage"
+                      ContentTemplate="{DataTemplate localRegistration:LoginPage}" />
+    </FlyoutItem>-->
+    
+    <!--<FlyoutItem Title="{i18n:Translate SignUp}" 
+                Icon="icon_feed.png">
+        <ShellContent Route="SignUpPage" 
+                      ContentTemplate="{DataTemplate localRegistration:SignUpPage}" />
+    </FlyoutItem>-->
+
+    <FlyoutItem Title="{i18n:Translate ChiefGuest}" 
+                Icon="icon_feed.png">
+        <ShellContent Route="ChiefGuest" 
+                      ContentTemplate="{DataTemplate localChiefGuest:ChiefGuestPage}" />
+    </FlyoutItem>
+
+    <!--<FlyoutItem Title="{i18n:Translate AddNewChiefGuest}" 
+                IsVisible="{Binding AdminShow}" 
+                Icon="icon_feed.png">
+        <ShellContent Route="ChiefGuestAddPage"
+                      ContentTemplate="{DataTemplate localChiefGuest:ChiefGuestAddPage}" />
+    </FlyoutItem>-->
+
+    <!--<FlyoutItem Title="{i18n:Translate UpdateChiefGuest}"
+                IsVisible="{Binding AdminShow}" 
+                Icon="icon_feed.png">
+        <ShellContent Route="ChiefGuestUpdatePage" 
+                      ContentTemplate="{DataTemplate localChiefGuest:ChiefGuestUpdatePage}" />
+    </FlyoutItem>-->
+
+    <!--<FlyoutItem Title="{i18n:Translate Organizers}" 
+                Icon="icon_feed.png">
+        <ShellContent Route="OrganizersListPage" 
+                      ContentTemplate="{DataTemplate localOrganizer:OrganizersListPage}" />
+    </FlyoutItem>-->
+
+    <!--<FlyoutItem Title="{i18n:Translate UpdateOrganizers}" 
+                IsVisible="{Binding AdminShow}"
+                Icon="icon_feed.png">
+        <ShellContent Route="OrganizersListUpdatePage" 
+                      ContentTemplate="{DataTemplate localOrganizer:OrganizersListUpdatePage}" />
+    </FlyoutItem>-->
+
+
+    <!--<FlyoutItem Title="{i18n:Translate About}" Icon="icon_about.png">
+        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate localAbout:AboutPage}" />
+    </FlyoutItem>
+    
+        <FlyoutItem Title="{i18n:Translate UpdateAbout}" IsVisible="{Binding AdminShow}" Icon="icon_about.png">
+        <ShellContent Route="AboutUpdatePage" ContentTemplate="{DataTemplate localAbout:AboutUpdatePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="{i18n:Translate AddNewAbout}" IsVisible="{Binding AdminShow}" Icon="icon_feed.png">
+        <ShellContent Route="AboutAddPage" ContentTemplate="{DataTemplate localAbout:AboutAddPage}"/>
+    </FlyoutItem>-->
+
+
+
+    <FlyoutItem Title="{i18n:Translate AddOrganizers}"
+                IsVisible="{Binding AdminShow}"
+                Icon="icon_feed.png">
+        <ShellContent Route="OrganizersAddPage" 
+                      ContentTemplate="{DataTemplate localOrganizer:OrganizersAddPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="{i18n:Translate AddNewChiefGuest}" 
+                IsVisible="{Binding AdminShow}" 
+                Icon="icon_feed.png">
+        <ShellContent Route="ChiefGuestAddPage"
+                      ContentTemplate="{DataTemplate localChiefGuest:ChiefGuestAddPage}" />
+    </FlyoutItem>
+
+
+
+
+    <!--<FlyoutItem Title="{i18n:Translate Jhankaul}" Icon="icon_feed.png">
+        <ShellContent Route="HomePage" ContentTemplate="{DataTemplate localHome:HomePage}" />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="{i18n:Translate Profile}" IsVisible="{Binding StudentShow}" Icon="icon_feed.png">
+        <ShellContent Route="ProfilePage" ContentTemplate="{DataTemplate localProfile:ProfilePage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="{i18n:Translate AdmitCard}" Icon="icon_feed.png">
+        <ShellContent Route="AdmitCardPage" ContentTemplate="{DataTemplate localAdmitCard:AdmitCardPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="{i18n:Translate Result}" Icon="icon_feed.png">
+        <ShellContent Route="ResultPage" ContentTemplate="{DataTemplate localResult:ResultPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="{i18n:Translate AllStudents}" Icon="icon_feed.png">
+        <ShellContent Route="AllStudentsPage" ContentTemplate="{DataTemplate localAllStudent:AllStudentsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="{i18n:Translate Prizes}" Icon="icon_feed.png">
+        <ShellContent Route="PrizesListPage" ContentTemplate="{DataTemplate localPrizes:PrizesListPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="{i18n:Translate School}" Icon="icon_feed.png">
+        <ShellContent Route="SchoolsListPage" ContentTemplate="{DataTemplate localSchool:SchoolsListPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="{i18n:Translate Sainik}" Icon="icon_feed.png">
+        <ShellContent Route="SainiksListPage" ContentTemplate="{DataTemplate localSaink:SainiksListPage}" />
+    </FlyoutItem>
+    
+    
+    <FlyoutItem Title="{i18n:Translate About}" Icon="icon_about.png">
+        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate localAbout:AboutPage}" />
+    </FlyoutItem>
+
+
+    <FlyoutItem Title="{i18n:Translate UpdateJhankaul}" IsVisible="{Binding AdminShow}" Icon="icon_feed.png">
+        <ShellContent Route="HomeUpdatePage" ContentTemplate="{DataTemplate localHome:HomeUpdatePage}" />
+    </FlyoutItem>
+   
+    <FlyoutItem Title="{i18n:Translate UpdateProfile}" IsVisible="{Binding AdminShow}" Icon="icon_feed.png">
+        <ShellContent Route="ProfileUpdatePage" ContentTemplate="{DataTemplate localProfile:ProfileUpdatePage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="{i18n:Translate UpdateAdmitCard}" IsVisible="{Binding AdminShow}" Icon="icon_feed.png">
+        <ShellContent Route="AdmitCardUpdatePage" ContentTemplate="{DataTemplate localAdmitCard:AdmitCardUpdatePage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="{i18n:Translate UpdateResults}" IsVisible="{Binding AdminShow}" Icon="icon_feed.png">
+        <ShellContent Route="ResultUpdatePage" ContentTemplate="{DataTemplate localResult:ResultUpdatePage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="{i18n:Translate UpdateAllStudents}" IsVisible="{Binding AdminShow}" Icon="icon_feed.png">
+        <ShellContent Route="AllStudentsUpdatePage" ContentTemplate="{DataTemplate localAllStudent:AllStudentsUpdatePage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="{i18n:Translate UpdatePrizes}" IsVisible="{Binding AdminShow}" Icon="icon_feed.png">
+        <ShellContent Route="PrizesListUpdatePage" ContentTemplate="{DataTemplate localPrizes:PrizesListUpdatePage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="{i18n:Translate UpdateSchool}" IsVisible="{Binding AdminShow}" Icon="icon_feed.png">
+        <ShellContent Route="SchoolsListUpdatePage" ContentTemplate="{DataTemplate localSchool:SchoolsListUpdatePage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="{i18n:Translate UpdateSainik}" IsVisible="{Binding AdminShow}" Icon="icon_feed.png">
+        <ShellContent Route="SainiksListUpdatePage" ContentTemplate="{DataTemplate localSaink:SainiksListUpdatePage}" />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="{i18n:Translate UpdateAbout}" IsVisible="{Binding AdminShow}" Icon="icon_about.png">
+        <ShellContent Route="AboutUpdatePage" ContentTemplate="{DataTemplate localAbout:AboutUpdatePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="{i18n:Translate AddJhankaul}" IsVisible="{Binding AdminShow}" Icon="icon_about.png">
+        <ShellContent Route="HomeAddPage" ContentTemplate="{DataTemplate localHome:HomeAddPage}"/>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="{i18n:Translate AddNewAbout}" IsVisible="{Binding AdminShow}" Icon="icon_feed.png">
+        <ShellContent Route="AboutAddPage" ContentTemplate="{DataTemplate localAbout:AboutAddPage}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="{i18n:Translate AddNewAdmitCard}" IsVisible="{Binding AdminShow}" Icon="icon_feed.png">
+        <ShellContent Route="AdmitCardAddPage" ContentTemplate="{DataTemplate localAdmitCard:AdmitCardAddPage}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="{i18n:Translate AddNewAllStudent}" IsVisible="{Binding AdminShow}" Icon="icon_feed.png">
+        <ShellContent Route="AllStudentsAddPage" ContentTemplate="{DataTemplate localAllStudent:AllStudentsAddPage}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="{i18n:Translate AddNewSainik}" IsVisible="{Binding AdminShow}" Icon="icon_feed.png">
+        <ShellContent Route="SainikAddPage" ContentTemplate="{DataTemplate localSaink:SainikAddPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="{i18n:Translate AddResults}" IsVisible="{Binding AdminShow}" Icon="icon_feed.png">
+        <ShellContent Route="ResultAddPage" ContentTemplate="{DataTemplate localResult:ResultAddPage}" />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="{i18n:Translate AddPrizes}" IsVisible="{Binding AdminShow}" Icon="icon_feed.png">
+        <ShellContent Route="PrizesAddPage" ContentTemplate="{DataTemplate localPrizes:PrizesAddPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="{i18n:Translate AddSchool}" IsVisible="{Binding AdminShow}" Icon="icon_feed.png">
+        <ShellContent Route="SchoolsAddPage" ContentTemplate="{DataTemplate localSchool:SchoolsAddPage}" />
+    </FlyoutItem>
+
+    
+
+    --><!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  --><!--
+    <MenuItem Text="{i18n:Translate Logout}" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked"/>
+
+
+    --><!--
+        TabBar lets you define content that won't show up in a flyout menu. When this content is active
+        the flyout menu won't be available. This is useful for creating areas of the application where 
+        you don't want users to be able to navigate away from. If you would like to navigate to this 
+        content you can do so by calling 
+        await Shell.Current.GoToAsync("//LoginPage");
+    --><!--
+    <TabBar>
+        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate localRegistration:LoginPage}" />
+    </TabBar>-->
+
+    <!-- Optional Templates 
+    // These may be provided inline as below or as separate classes.
+
+    // This header appears at the top of the Flyout.
+    // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyout-header
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid>ContentHere</Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    // ItemTemplate is for ShellItems as displayed in a Flyout
+    // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#define-flyoutitem-appearance
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <ContentView>
+                Bindable Properties: Title, Icon
+            </ContentView>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    // MenuItemTemplate is for MenuItems as displayed in a Flyout
+    // https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#define-menuitem-appearance
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <ContentView>
+                Bindable Properties: Text, Icon
+            </ContentView>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+
+    -->
+
+</Shell>
