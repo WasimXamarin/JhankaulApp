@@ -8,6 +8,8 @@ namespace JhankaulSainik.ConstantFunction
 {
     public class ToastClass
     {
+
+        // Application Change into Hindi Language.
         public static void HindiLanguageMethod()
         {
             var toastConfig = new ToastConfig(AppResource.AppResources.NowAppInHindi);
@@ -19,6 +21,7 @@ namespace JhankaulSainik.ConstantFunction
             App.Current.MainPage = new AppShell();
         }
 
+        // Application Change into Hindi Language.
         public static void EnglishLanguageMethod()
         {
             var toastConfig = new ToastConfig(AppResource.AppResources.NowAppInEnglish);
@@ -30,6 +33,7 @@ namespace JhankaulSainik.ConstantFunction
             App.Current.MainPage = new AppShell();
         }
 
+        // Green Toaster Message display.
         public static void GreenMessageMethod(string YourMessage)
         {
             var toastConfig = new ToastConfig(YourMessage);
@@ -39,6 +43,7 @@ namespace JhankaulSainik.ConstantFunction
             UserDialogs.Instance.Toast(toastConfig);
         }
 
+        // Red Toaster Message display.
         public static void RedMessageMethod(string YourMessage)
         {
             var toastConfig = new ToastConfig(YourMessage);
